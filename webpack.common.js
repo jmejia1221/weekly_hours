@@ -5,8 +5,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
     entry: {
-        app: './src/index.js',
-        // print: './src/print.js'
+        app: path.resolve(__dirname, 'src/entries/index.js'),
     },
     output: {
         filename: '[name].min.js',
@@ -15,17 +14,31 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(css|scss)$/,
+                test: /\.(css|scss|sass)$/,
                 use: [
                     devMode ? 'style-loader' : MiniCssExtractPlugin.loader, 
                     'css-loader',
-                    'sass-loader',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                            includePaths: [
+                                path.resolve(__dirname, 'src', 'assets'),
+                                path.resolve(__dirname, 'node_modules')
+                            ]
+                        }
+                    },
                     {
                         loader: 'postcss-loader',
                         options: {
                             config: {
                                 path: __dirname + '/postcss.config.js'
-                            }
+                            },
+
+                            includePaths: [
+                                path.resolve(__dirname, '/src'),
+                                path.resolve(__dirname, '/node_modules')
+                            ]
                         }
                     }
                 ]
@@ -42,7 +55,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            template: "./src/index.html",
+            template: "./public/index.html",
             filename: "./index.html",
             title: 'Weekly Hours App'
         }),
