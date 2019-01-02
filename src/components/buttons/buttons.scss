@@ -1,0 +1,22 @@
+@import 'app';
+
+.button {
+    @include m('add-circle') {
+        color: $WHITE;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        text-align: center;
+        display: inline-block;
+        background: $PRIMARY-COLOR;
+    }
+    @include m('primary') {
+        border: 0;
+        background: $PRIMARY-COLOR;
+        color: $WHITE;
+        min-width: 50px;
+        border-radius: 50em;
+        padding: 5px 15px;
+    }
+}

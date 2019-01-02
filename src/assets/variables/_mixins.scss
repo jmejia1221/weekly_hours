@@ -1,0 +1,31 @@
+// Block Element
+// @access public
+// @param {String} $element - Element's name
+
+@mixin element($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin e($element) {
+    @include element($element) {
+        @content;
+    }
+}
+
+// Block Modifies
+// @access public
+// @param {String} $modifier - Modifier's name
+
+@mixin modify($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    @include modify($modifier) {
+        @content;
+    }
+}
