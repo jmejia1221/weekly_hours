@@ -8,14 +8,17 @@ import PanelLayout from '../panel/panel-layout'
 import History from '../history/history-layout'
 
 class Home extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <HomeLayout>
                 <h1>Weekly Hours</h1>
                 <AddButton>+</AddButton>
                 <Button type="dark">Dark Mode</Button>
-                <PanelLayout />
-                <History />
+                <PanelLayout data={this.props.data.users} />
+                <History data={this.props.data.users} />
             </HomeLayout>
         )
     }

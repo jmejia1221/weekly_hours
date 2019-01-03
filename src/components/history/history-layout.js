@@ -9,7 +9,13 @@ function History(props) {
             <header>
                 <h4>Work History</h4>
             </header>
-            <WeekBox />
+            <div className="box">
+                {
+                    props.data[0].history.map((user, index) => {
+                        return <WeekBox key={index} {...user} />
+                    })
+                }
+            </div>
         </section>
     )
 }

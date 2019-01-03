@@ -1,8 +1,11 @@
+//  CSS
+import './home.scss';
+
 import React from 'react';
 
 function HomeLayout(props) {
     return (
-        <section>
+        <section className="container">
             {props.children}
         </section>
     )

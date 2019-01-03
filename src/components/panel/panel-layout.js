@@ -17,7 +17,7 @@ function PanelLayout(props) {
                 <Button>Add</Button>
             </PanelHeader>
             <PanelBody>
-                <Table />
+                <Table data={props.data} />
             </PanelBody>
         </section>
     )

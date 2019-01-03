@@ -1,18 +1,26 @@
-import React from 'react';
+// CSS
+import './boxes.scss'
 
-function WeekBox() {
-    return (
-        <div className="">
-            <div>
-                <span>Week</span>
-                <span>35</span>
+import React, { PureComponent } from 'react';
+
+class WeekBox extends PureComponent {
+    constructor(props) {
+        super(props)
+    }
+    render() {
+        return (
+            <div className="box--white box--shadow">
+                <div>
+                    <span>Week</span>
+                    <span>{ this.props.total_hours }</span>
+                </div>
+                <div>
+                    <span>{ this.props.beginning_date }</span>
+                    <span>{ this.props.end_date }</span>
+                </div>
             </div>
-            <div>
-                <span>12 / Sep / 2018</span>
-                <span>12 / Sep / 2018</span>
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
 
