@@ -1,11 +1,26 @@
 import React from 'react';
 
-function MainButton(props) {
+/**
+ * 
+ * @param {children} props 
+ * @param {type} props  primary, secondary
+ */
+
+function Button(props) {
+    const {
+        children,
+        type
+    } = props;
+
     return (
-        <button className={props.type === 'secondary' ? 'button--secondary' : 'button--primary'}>
-            {props.name}
+        <button className={`button button--${type}`}>
+            {children}
         </button>
     )
 }
 
-export default MainButton;
+Button.defaultProps = {
+    type: 'primary'
+}
+
+export default Button;

@@ -1,6 +1,10 @@
 @import 'app';
 
 .button {
+    border: 0;
+    min-width: 50px;
+    border-radius: 50em;
+    padding: 5px 15px;
     @include m('add-circle') {
         color: $WHITE;
         border-radius: 50%;
@@ -12,11 +16,11 @@
         background: $PRIMARY-COLOR;
     }
     @include m('primary') {
-        border: 0;
         background: $PRIMARY-COLOR;
         color: $WHITE;
-        min-width: 50px;
-        border-radius: 50em;
-        padding: 5px 15px;
+    }
+    @include m('dark') {
+        color: $WHITE;
+        background: $DARK;
     }
 }

@@ -3,9 +3,14 @@ import './buttons.scss';
 
 import React from 'react';
 
-function addButton() {
+function addButton(props) {
+    const {
+        children
+    } = props;
     return (
-        <span className="button--add-circle">+</span>
+        <span className="button--add-circle">
+            {children}
+        </span>
     )
 }
 
