@@ -1,0 +1,23 @@
+@import 'app';
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    @include m('white') {
+        flex-grow: 1;
+        padding: 20px;
+        border-radius: 10px;
+        background: $WHITE;
+        margin: 10px;
+    }
+    @include m('no-padding') {
+        padding: 0;
+    }
+    @include m('no-radius') {
+        border: 0;
+    }
+    @include m('shadow') {
+        @include box-shadow($GREY-6)
+    }
+}

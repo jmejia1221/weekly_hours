@@ -1,0 +1,87 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "user": "John Mejia",
+            "week": [
+                {
+                    "day": "Monday",
+                    "hours": 7
+                },
+                {
+                    "day": "Tuesday",
+                    "hours": 7
+                },
+                {
+                    "day": "Wednesday",
+                    "hours": 7
+                },
+                {
+                    "day": "Thursday",
+                    "hours": 7
+                },
+                {
+                    "day": "Friday",
+                    "hours": 7
+                }
+            ],
+            "history": [
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                }
+            ]
+        }
+    ]
+}
