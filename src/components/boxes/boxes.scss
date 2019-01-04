@@ -1,10 +1,36 @@
 @import 'app';
 
-.box {
+.week-box {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    @include e('week') {
+        color: $GREY-4;
+        width: 100px;
+        text-align: center;
+        border-right: 1px solid #eee;
+        padding-right: 15px;
+        @include m('text') {
+            font-size: 1.8em;
+        }
+        @include m('hours') {
+            color: $GREY-7;
+            font-size: .9em;
+        }
+    }
+    @include e('date') {
+        color: $GREY-7;
+        font-size: .9em;
+        text-align: center;
+        flex-grow: 1;
+        @include m('start') {
+            margin: 5px 0 10px;
+        }
+    }
     @include m('white') {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         flex-grow: 1;
         padding: 20px;
         border-radius: 10px;

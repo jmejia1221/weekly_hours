@@ -1,3 +1,6 @@
+// CSS
+import './panel.scss';
+
 import React from 'react';
 
 // Components
@@ -9,16 +12,22 @@ import Table from '../tables/table';
 function PanelLayout(props) {
     return (
         <section>
-            <PanelHeader>
-                <h4>
-                    John Mejia
-                    <span>17 / Sep / 2018 to 17 / Sep / 2018</span>
-                </h4>
-                <Button>Add</Button>
-            </PanelHeader>
-            <PanelBody>
-                <Table data={props.data} />
-            </PanelBody>
+            <div className="panel panel--white panel--shadow padding--20">
+                <PanelHeader>
+                    <div className="row">
+                        <h4 className="title subtitle col-xs-11">
+                            John Mejia
+                            <span className="panel__header--date">17 / Sep / 2018 to 17 / Sep / 2018</span>
+                        </h4>
+                        <div className="col-xs-1">
+                            <Button className="rigth">Add</Button>
+                        </div>
+                    </div>
+                </PanelHeader>
+                <PanelBody>
+                    <Table data={props.data} />
+                </PanelBody>
+            </div>
         </section>
     )
 }

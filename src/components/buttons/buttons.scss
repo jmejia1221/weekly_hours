@@ -4,13 +4,14 @@
     border: 0;
     min-width: 50px;
     border-radius: 50em;
-    padding: 5px 15px;
+    padding: 5px 20px;
     @include m('add-circle') {
         color: $WHITE;
         border-radius: 50%;
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
         cursor: pointer;
+        line-height: 30px;
         text-align: center;
         display: inline-block;
         background: $PRIMARY-COLOR;

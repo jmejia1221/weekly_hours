@@ -1,0 +1,34 @@
+@import 'app';
+
+.panel {
+    @include e('title') {
+        padding: 10px 0;
+        margin: 30px 10px 10px;
+        border-bottom: 1px solid #ccc;
+    }
+    @include e('header') {
+        border-bottom: 1px solid #eee;
+        padding: 10px 0;
+        font-size: .9em;
+        margin-bottom: 10px;
+        @include m('date') {
+            font-size: .7em;
+            margin-left: 10px;
+        }
+    }
+    @include m('white') {
+        padding: 10px 20px;
+        border-radius: 10px;
+        background: $WHITE;
+        margin: 10px;
+    }
+    @include m('no-padding') {
+        padding: 0;
+    }
+    @include m('no-radius') {
+        border: 0;
+    }
+    @include m('shadow') {
+        @include box-shadow($GREY-6)
+    }
+}

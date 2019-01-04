@@ -9,14 +9,14 @@ class WeekBox extends PureComponent {
     }
     render() {
         return (
-            <div className="box--white box--shadow">
-                <div>
-                    <span>Week</span>
-                    <span>{ this.props.total_hours }</span>
+            <div className="week-box--white week-box--shadow">
+                <div className="week-box__week">
+                    <div className="week-box__week--text">Week</div>
+                    <div className="week-box__week--hours">{ this.props.total_hours } Hours</div>
                 </div>
-                <div>
-                    <span>{ this.props.beginning_date }</span>
-                    <span>{ this.props.end_date }</span>
+                <div className="week-box__date">
+                    <div className="week-box__date--start">{ this.props.beginning_date }</div>
+                    <div className="week-box__date--end">{ this.props.end_date }</div>
                 </div>
             </div>
         )

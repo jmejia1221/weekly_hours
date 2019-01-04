@@ -6,22 +6,27 @@
             "week": [
                 {
                     "day": "Monday",
+                    "description": "Fixing issues with the weekly hours app",
                     "hours": 7
                 },
                 {
                     "day": "Tuesday",
+                    "description": "Fixing issues with the weekly hours app",
                     "hours": 7
                 },
                 {
                     "day": "Wednesday",
+                    "description": "Fixing issues with the weekly hours app",
                     "hours": 7
                 },
                 {
                     "day": "Thursday",
+                    "description": "Fixing issues with the weekly hours app",
                     "hours": 7
                 },
                 {
                     "day": "Friday",
+                    "description": "Fixing issues with the weekly hours app",
                     "hours": 7
                 }
             ],

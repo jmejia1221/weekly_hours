@@ -1,1 +1,12 @@
 @import 'app';
+
+.home-title,
+.add-hours {
+    display: inline-block;
+}
+.home-title {
+    color: $GREY-4;
+}
+.add-hours {
+    vertical-align: bottom;
+}

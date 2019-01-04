@@ -1,3 +1,6 @@
+// CSS
+import './history.scss';
+
 import React from 'react';
 
 // Components
@@ -7,9 +10,9 @@ function History(props) {
     return (
         <section>
             <header>
-                <h4>Work History</h4>
+                <h4 className="sub-title history-title">Work History</h4>
             </header>
-            <div className="box">
+            <div className="week-box">
                 {
                     props.data[0].history.map((user, index) => {
                         return <WeekBox key={index} {...user} />

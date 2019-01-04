@@ -7,8 +7,9 @@ function addButton(props) {
     const {
         children
     } = props;
+    console.log(props)
     return (
-        <span className="button--add-circle">
+        <span className="button--add-circle" onClick={props.handleModalOpen}>
             {children}
         </span>
     )

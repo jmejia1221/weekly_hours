@@ -1,10 +1,236 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+:root {
+    --gutter-width: 1rem;
+    --half-gutter-width: calc((var(--gutter-width) * 0.5));
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body {
-    background-color: $GREY-10;
+    background-color: $GREY-11;
     font-family: 'Open Sans', sans-serif;
+}
+.title {
+    font-size: 22px;
+    font-weight: 300;
+    color: $GREY-6;
+}
+.sub-title {
+    font-size: 1.5em;
+    font-weight: 300;
 }
 .container {
     width: 80%;
     margin: 0 auto;
+}
+.link {
+    color: $PRIMARY-COLOR;
+    @include m('underline') {
+        border-bottom: 2px solid $PRIMARY-COLOR;
+    }
+}
+.text {
+    @include m('left') {
+        text-align: left;
+    }
+    @include m('right') {
+        text-align: right;
+    }
+    @include m('center') {
+        text-align: center;
+    }
+}
+.float {
+    @include m('right') {
+        float: right;
+    }
+    @include m('left') {
+        float: left;
+    }
+    @include m('none') {
+        float: none;
+    }
+}
+.padding {
+    @include m('10') {
+        padding: 10px;
+    }
+    @include m('20') {
+        padding: 20px;
+    }
+}
+.margin {
+    @include m('10') {
+        margin: 10px;
+    }
+    @include m('20') {
+        margin: 20px;
+    }
+    @include m('top-10') {
+        margin-top: 10px;
+    }
+    @include m('bottom-10') {
+        margin-bottom: 10px;
+    }
+    @include m('left-10') {
+        margin-left: 10px;
+    }
+}
+
+// GRID SYSTEM
+.row {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: -.5rem;
+    margin-left: -.5rem;
+}
+.col-xs,
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-offset-0,
+.col-xs-offset-1,
+.col-xs-offset-2,
+.col-xs-offset-3,
+.col-xs-offset-4,
+.col-xs-offset-5,
+.col-xs-offset-6,
+.col-xs-offset-7,
+.col-xs-offset-8,
+.col-xs-offset-9,
+.col-xs-offset-10,
+.col-xs-offset-11,
+.col-xs-offset-12 {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-right: var(--half-gutter-width, 0.5rem);
+  padding-left: var(--half-gutter-width, 0.5rem);
+}
+
+.col-xs {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.col-xs-1 {
+  flex-basis: 8.33333333%;
+  max-width: 8.33333333%;
+}
+
+.col-xs-2 {
+  flex-basis: 16.66666667%;
+  max-width: 16.66666667%;
+}
+
+.col-xs-3 {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.col-xs-4 {
+  flex-basis: 33.33333333%;
+  max-width: 33.33333333%;
+}
+
+.col-xs-5 {
+  flex-basis: 41.66666667%;
+  max-width: 41.66666667%;
+}
+
+.col-xs-6 {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.col-xs-7 {
+  flex-basis: 58.33333333%;
+  max-width: 58.33333333%;
+}
+
+.col-xs-8 {
+  flex-basis: 66.66666667%;
+  max-width: 66.66666667%;
+}
+
+.col-xs-9 {
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.col-xs-10 {
+  flex-basis: 83.33333333%;
+  max-width: 83.33333333%;
+}
+
+.col-xs-11 {
+  flex-basis: 91.66666667%;
+  max-width: 91.66666667%;
+}
+
+.col-xs-12 {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.col-xs-offset-0 {
+  margin-left: 0;
+}
+
+.col-xs-offset-1 {
+  margin-left: 8.33333333%;
+}
+
+.col-xs-offset-2 {
+  margin-left: 16.66666667%;
+}
+
+.col-xs-offset-3 {
+  margin-left: 25%;
+}
+
+.col-xs-offset-4 {
+  margin-left: 33.33333333%;
+}
+
+.col-xs-offset-5 {
+  margin-left: 41.66666667%;
+}
+
+.col-xs-offset-6 {
+  margin-left: 50%;
+}
+
+.col-xs-offset-7 {
+  margin-left: 58.33333333%;
+}
+
+.col-xs-offset-8 {
+  margin-left: 66.66666667%;
+}
+
+.col-xs-offset-9 {
+  margin-left: 75%;
+}
+
+.col-xs-offset-10 {
+  margin-left: 83.33333333%;
+}
+
+.col-xs-offset-11 {
+  margin-left: 91.66666667%;
 }
