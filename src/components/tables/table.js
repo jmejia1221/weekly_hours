@@ -7,6 +7,11 @@ import React from 'react';
 import TableRow from './table-row'
 
 function Table(props) {
+    let total = [];
+    props.data[0].week.map((week) => {
+        console.log(week.hours)
+        total.push(week.hours);
+    })
     return (
         <section>
             <table className="table">
@@ -29,11 +34,15 @@ function Table(props) {
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td className="link text--right">
+                        <td className="link text--right padding--20">
                             <strong className="link--underline">Total</strong>
                         </td>
                         <td className="link text--center">
-                            <strong className="link--underline">Hours</strong>
+                            <strong className="link--underline">
+                                {
+                                    total.reduce((total, hour) => total + hour)
+                                } Hours
+                            </strong>
                         </td>
                     </tr>
                 </tfoot>
