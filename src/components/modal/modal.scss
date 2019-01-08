@@ -1,3 +1,5 @@
+@import 'app';
+
 .Modal {
     max-width: 768px;
     width: 100%;
@@ -6,10 +8,10 @@
     left: 0;
     right: 0;
     top: 100px;
-    background:  white;
+    background:  $WHITE;
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    border-radius: 10px;
+    @include box-shadow($DARK)
   }
 .Modal-bg {
     position: fixed;
@@ -21,18 +23,18 @@
 }
   
   .Modal-close {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     position: absolute;
-    right: -25px;
-    top: -25px;
+    right: 15px;
+    top: 15px;
     border-radius: 50%;
     border: none;
-    background: #171c30;
-    color: white;
+    background: $DARK;
+    color: $WHITE;
     cursor: pointer;
     text-align: center;
-    line-height: 50px;
+    line-height: 30px;
   }
   
   .Modal-close:after {

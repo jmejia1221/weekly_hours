@@ -5,9 +5,9 @@ import ReactDOM from 'react-dom';
 import data from '../__docs__/data.json';
 
 // Components
-import Home from '../components/home/home'
+import App from '../app/app'
 
 ReactDOM.render(
-  <Home data={data} />,
+  <App data={data} />,
   document.getElementById('app')
 );

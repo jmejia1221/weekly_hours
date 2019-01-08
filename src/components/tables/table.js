@@ -8,7 +8,7 @@ import TableRow from './table-row'
 
 function Table(props) {
     let total = [];
-    props.data[0].week.map((week) => {
+    props.data.week.map((week) => {
         console.log(week.hours)
         total.push(week.hours);
     })
@@ -27,7 +27,7 @@ function Table(props) {
                 </thead>
                 <tbody>
                     {
-                        props.data[0].week.map((week, index) => {
+                        props.data.week.map((week, index) => {
                             return <TableRow key={index} data={week} />
                         })
                     }

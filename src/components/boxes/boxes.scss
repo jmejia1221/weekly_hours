@@ -1,5 +1,14 @@
 @import 'app';
 
+.box-layout {
+    padding: 20px;
+    border-radius: 10px;
+    background: $WHITE;
+    @include e('child') {
+        justify-content: space-between;
+    }
+    @include box-shadow($GREY-6)
+}
 .week-box {
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +17,7 @@
         color: $GREY-4;
         width: 100px;
         text-align: center;
-        border-right: 1px solid #eee;
+        border-right: 1px solid $GREY-10;
         padding-right: 15px;
         @include m('text') {
             font-size: 1.8em;

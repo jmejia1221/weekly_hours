@@ -16,11 +16,11 @@ function PanelLayout(props) {
                 <PanelHeader>
                     <div className="row">
                         <h4 className="title subtitle col-xs-11">
-                            John Mejia
+                            {props.data.user}
                             <span className="panel__header--date">17 / Sep / 2018 to 17 / Sep / 2018</span>
                         </h4>
                         <div className="col-xs-1">
-                            <Button className="rigth">Add</Button>
+                            <Button className="rigth">Save</Button>
                         </div>
                     </div>
                 </PanelHeader>

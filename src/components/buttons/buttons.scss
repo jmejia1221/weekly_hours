@@ -5,6 +5,7 @@
     min-width: 50px;
     border-radius: 50em;
     padding: 5px 20px;
+    cursor: pointer;
     @include m('add-circle') {
         color: $WHITE;
         border-radius: 50%;

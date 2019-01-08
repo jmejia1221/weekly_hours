@@ -87,6 +87,94 @@
                     "end_date": "04 / Enero / 2019"
                 }
             ]
+        },
+        {
+            "id": 2,
+            "user": "Sebastian",
+            "week": [
+                {
+                    "day": "Monday",
+                    "description": "Fixing issues with the weekly hours app",
+                    "hours": 7
+                },
+                {
+                    "day": "Tuesday",
+                    "description": "Fixing issues with the weekly hours app",
+                    "hours": 7
+                },
+                {
+                    "day": "Wednesday",
+                    "description": "Fixing issues with the weekly hours app",
+                    "hours": 7
+                },
+                {
+                    "day": "Thursday",
+                    "description": "Fixing issues with the weekly hours app",
+                    "hours": 7
+                },
+                {
+                    "day": "Friday",
+                    "description": "Fixing issues with the weekly hours app",
+                    "hours": 7
+                }
+            ],
+            "history": [
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                },
+                {
+                    "total_hours": 35,
+                    "beginning_date": "31 / Diciembre / 2018",
+                    "end_date": "04 / Enero / 2019"
+                }
+            ]
         }
     ]
 }
