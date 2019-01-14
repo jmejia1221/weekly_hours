@@ -6,9 +6,11 @@ import ReportLayout from './reports-layout';
 import Tabset from '../../components/tabs/tabset';
 import Tab from '../../components/tabs/tab';
 import Header from '../../components/header/header';
+import BoxWrapper from '../../components/boxes/box-wrapper';
 import BoxLayout from '../../components/boxes/box-layout';
 import WeekBox from '../../components/boxes/week-box';
 import PanelLayout from '../../components/panel/panel-layout';
+import Button from '../../components/buttons/button';
 
 class Report extends Component {
     constructor(props) {
@@ -46,40 +48,28 @@ class Report extends Component {
     render() {
         return (
             <ReportLayout>
-                <Header title="Team Reports" modal={false} />
-                <Link to="/">Home</Link>
-                {/* <div>{JSON.stringify(this.state.dataUser)}</div> */}
+                <Link to="/">
+                    <Header title="Team Reports" publicUrl="/reports" modal={false} />
+                </Link>
                 <Tabset>
                     <Tab title="All">
-                        <div className="row">
-                            <BoxLayout>
-                                {
-                                    this.props.data.users[0].history.map((user, index) => {
-                                        return (
-                                            <WeekBox key={index} {...user} />
-                                        )
-                                    })
-                                }
-                            </BoxLayout>
-                            <BoxLayout>
-                                {
-                                    this.props.data.users[0].history.map((user, index) => {
-                                        return (
-                                            <WeekBox key={index} {...user} />
-                                        )
-                                    })
-                                }
-                            </BoxLayout>
-                            <BoxLayout>
-                                {
-                                    this.props.data.users[0].history.map((user, index) => {
-                                        return (
-                                            <WeekBox key={index} {...user} />
-                                        )
-                                    })
-                                }
-                            </BoxLayout>
-                        </div>
+                        <BoxWrapper>
+                            {
+                                this.props.data.users.map((user, index) => {
+                                    return (
+                                        <BoxLayout scroll={true} key={index} title={user.user}>
+                                            {
+                                                user.history.slice(0, 3).map((userHistory, i) => {
+                                                    return (
+                                                        <WeekBox key={i} {...userHistory} />
+                                                    )
+                                                })
+                                            }
+                                        </BoxLayout>
+                                    )
+                                })
+                            }
+                        </BoxWrapper>
                     </Tab>
                     <Tab title="This Week">
                         {

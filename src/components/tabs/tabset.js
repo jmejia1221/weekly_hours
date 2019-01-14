@@ -18,8 +18,7 @@ class Tabset extends React.Component {
                 this.props.title &&
                 <h1>{ this.props.title }</h1>
             }
-            <Tab
-                active={this.state.active}
+            <Tab active={this.state.active}
                 onChange={active => this.setState({active})}>
                 {
                     this.props.children.map((tab) => {

@@ -8,11 +8,11 @@ class Tab extends React.Component {
 
   render() {
     return (
-      <div className="Tabs">
+      <div className="tabset">
         {this.props.children.map((child, i) => {
-            let activeTabClass = `Tabs__Tab`;
+            let activeTabClass = `tabset__tab`;
             if (child.key === this.props.active) {
-                activeTabClass = `${activeTabClass} Tabs__Tab--active`;
+                activeTabClass = `${activeTabClass} ${activeTabClass}--active`;
             }
             return (
                 <div key={i} className={activeTabClass}

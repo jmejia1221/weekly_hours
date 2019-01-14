@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, NavLink, Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 // Components
 import AddButton from '../buttons/circle-button';
@@ -25,13 +25,16 @@ class Header extends Component {
                 <div className="col-xs-9">
                     <div className="float--right margin--top-10">
                         <div className="group-buttons">
-                            <BrowserRouter>
-                                <div>
-                                    {/* <NavLink exact to="/reports">View Reports</NavLink> */}
-                                    <Link to="/reports">Reports</Link>
-                                </div>
-                                {/* <Button>View Reports</Button> */}
-                            </BrowserRouter>
+                            {
+                                this.props.publicUrl === '/' ? 
+                                <NavLink to="/reports">
+                                    <Button>View Reports</Button>
+                                </NavLink>
+                                :
+                                <NavLink to="/">
+                                    <Button>Home</Button>
+                                </NavLink>
+                            }
                             <Button type="dark">Dark Mode</Button>
                         </div>
                     </div>

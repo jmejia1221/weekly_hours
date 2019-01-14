@@ -6,6 +6,9 @@
 
 * {
     box-sizing: border-box;
+    &:focus {
+        outline: none;
+    }
 }
 
 body {
@@ -16,6 +19,10 @@ body {
     font-size: 22px;
     font-weight: 300;
     color: $GREY-6;
+    @include m('underline') {
+        padding: 0 0 10px 0;
+        border-bottom: 1px solid $GREY-9;
+    }
 }
 .sub-title {
     font-size: 1.5em;
@@ -82,6 +89,22 @@ body {
     @include m('left-10') {
         margin-left: 10px;
     }
+}
+.vh-center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.input-1 {
+    border: 0;
+    border-radius: 50em;
+    width: 100%;
+    height: 35px;
+    margin: 5px 0;
+    padding: 5px 15px;
+    @include box-shadow($GREY-6);
+    transition: all .8s;
 }
 
 // GRID SYSTEM

@@ -24,7 +24,7 @@ class Home extends Component {
     render() {
         return (
             <HomeLayout>
-                <Header title="Weekly Hours" modal={true} handleClickModal={this.handleModalToggle} />
+                <Header title="Weekly Hours" publicUrl="/" modal={true} handleClickModal={this.handleModalToggle} />
                 <PanelLayout data={this.props.data.users[0]} />
                 <History data={this.props.data.users} />
                 {

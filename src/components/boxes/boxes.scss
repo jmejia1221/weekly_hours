@@ -1,13 +1,23 @@
 @import 'app';
 
+.box-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
 .box-layout {
     padding: 20px;
     border-radius: 10px;
     background: $WHITE;
+    margin: 10px;
+    @include box-shadow($GREY-6);
     @include e('child') {
         justify-content: space-between;
     }
-    @include box-shadow($GREY-6)
+    @include m('scroll') {
+        max-height: 450px;
+        overflow: hidden;
+        overflow-y: auto;
+    }
 }
 .week-box {
     display: flex;

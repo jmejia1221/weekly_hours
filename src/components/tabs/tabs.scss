@@ -1,28 +1,20 @@
 @import 'app';
 
-.Tabs {
+.tabset {
+    width: 100%;
     position: relative;
     display: inline-block;
     margin-bottom: 3px;
-  }
-  
-  .Tabs__Tab {
-    display: inline-block;
-    padding: 1em;
-    background: #ededed;
-    color: limegreen;
-    cursor: pointer;
-  }
-  
-  .Tabs__Tab:hover, .Tabs__Tab--active {
-    background: hotpink;
-    color: white;
-  }
-  
-  .Tabs__Underline {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    border-bottom: 3px solid orange;
-  }
+    border-bottom: 1px solid $GREY-9;
+    @include e('tab') {
+        font-weight: 600;
+        display: inline-block;
+        padding: 1em;
+        color: $PRIMARY-COLOR;
+        cursor: pointer;
+        @include m('active') {
+            color: $PRIMARY-COLOR;
+            border-bottom: 3px solid $PRIMARY-COLOR;
+        }
+    }
+}
