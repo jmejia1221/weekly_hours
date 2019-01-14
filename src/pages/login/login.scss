@@ -1,0 +1,15 @@
+@import 'app';
+
+.login-box {
+    width: 25%;
+    height: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    background: $WHITE;
+    margin: 10px;
+    transition: all .8s;
+    @include box-shadow($GREY-6);
+}
+.input-login-content {
+    padding: 45px 30px;
+}
