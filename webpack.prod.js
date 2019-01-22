@@ -15,13 +15,14 @@ module.exports = merge(common, {
         splitChunks: {
             cacheGroups: {
                 commons: {
+                    test: /node_modules/,
                     name: 'commons',
                     chunks: 'initial',
                     enforce: true
                 },
                 styles: {
                     name: 'styles',
-                    test: /\.css$/,
+                    test: /\.(css|scss)$/,
                     chunks: 'all',
                     enforce: true
                 }
