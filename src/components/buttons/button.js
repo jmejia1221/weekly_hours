@@ -9,11 +9,12 @@ import React from 'react';
 function Button(props) {
     const {
         children,
-        type
+        type,
+        onClick
     } = props;
 
     return (
-        <button className={`button button--${type}`}>
+        <button onClick={onClick} className={`button button--${type}`}>
             {children}
         </button>
     )

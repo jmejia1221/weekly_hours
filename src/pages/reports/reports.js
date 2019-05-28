@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { HTTP } from '../../common';
 
 // Components
 import ReportLayout from './reports-layout';
@@ -24,25 +25,9 @@ class Report extends Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:8000/reports/")
-        .then(res => res.json())
-        .then(
-            (result) => {
-                console.log(result)
-                this.setState({
-                    isLoaded: true,
-                    dataUser: result
-                });
-            },
-            (error) => {
-                this.setState({
-                    isLoaded: true,
-                    error
-                });
-                console.log(error);
-            }
-        )
-
+        HTTP.get('reports/').then(data => {
+            console.log(data)
+        })
     }
 
     render() {

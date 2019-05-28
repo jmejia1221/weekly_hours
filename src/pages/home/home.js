@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { HTTP } from '../../common';
 
 // Components
 import HomeLayout from './home-layout';
@@ -21,6 +22,13 @@ class Home extends Component {
             })
         }
     }
+
+    componentDidMount() {
+        HTTP.get('reports/').then(data => {
+            console.log(data)
+        })
+    }
+
     render() {
         return (
             <HomeLayout>
